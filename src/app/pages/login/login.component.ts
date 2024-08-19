@@ -40,6 +40,8 @@ export class LoginComponent {
       this.dadosForm['senha'].value).subscribe(
         token => {
           alert("Token: " + token);
+
+          this.router.navigate(['/dashboard']);
         },
         err => {
           alert("Ocorreu um erro!");
