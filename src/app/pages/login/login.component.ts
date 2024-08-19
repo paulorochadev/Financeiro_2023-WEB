@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent {
   /**
    *
    */
-  constructor(public formBuilder: FormBuilder, private router: Router) {
+  constructor(public formBuilder: FormBuilder, private router: Router, private loginService: LoginService) {
     
   }
 
@@ -34,6 +35,15 @@ export class LoginComponent {
   }
 
   loginUser() {
-    alert("OK")
+    this.loginService.login(
+      this.dadosForm["email"].value,
+      this.dadosForm['senha'].value).subscribe(
+        token => {
+          alert("Token: " + token);
+        },
+        err => {
+          alert("Ocorreu um erro!");
+        }
+      )
   }
 }
