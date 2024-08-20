@@ -39,7 +39,7 @@ export class LoginComponent {
       this.dadosForm["email"].value,
       this.dadosForm['senha'].value).subscribe(
         token => {
-          alert("Token: " + token);
+          // alert("Token: " + token);
 
           this.router.navigate(['/dashboard']);
         },

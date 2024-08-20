@@ -6,5 +6,63 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background: #27ae60;
+    background: #B4E7B6;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+input {
+    background: #FFFFFF;
+    box-sizing: border-box;
+    width: 397px;
+    height: 44px;
+    border: 1px solid #CCD4DB;
+    border-radius: 4px;
+    padding: 8px;
+    color: #6E778B;
+}
+
+label {
+
+}
+
+.error-input {
+    font-size: 14px;
+    color: red;
+}
+
+.btn-primary {
+
+}
+
+.container-base {
+    padding: 88px 16px 0px 128px;
+
+    .content-page {
+        background: white;
+        padding: 16px;
+        border-radius: 10px;
+        min-height: 800px;
+        min-width: 352px;
+
+        .card-header {
+            z-index: 3 !important;
+            width: 100%;
+            height: 80px;
+            background-color: #4CAF50;
+            box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+            border-radius: 8px;
+            margin-bottom: 16px;
+
+            .card-title {
+                color: #FFFFFF;
+                padding: 16px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
 }
