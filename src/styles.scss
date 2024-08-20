@@ -35,7 +35,14 @@ label {
 }
 
 .btn-primary {
+    color: #FFFFFF;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
 
+    cursor: pointer;
+    min-width: 150px;
+    width: auto;
 }
 
 .container-base {
@@ -62,6 +69,22 @@ label {
                 padding: 16px;
                 font-size: 16px;
                 font-weight: 500;
+            }
+        }
+
+        .form-page {
+            display: grid;
+            justify-content: center;
+
+            .row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 16px;
+
+                .group-row {
+                    display: grid;
+                }
             }
         }
     }
