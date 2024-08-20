@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [],
+  imports: [ CommonModule ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
@@ -13,10 +15,9 @@ export class SidebarComponent {
   /**
    *
    */
-  constructor(private router : Router) {
+  constructor(private router: Router, public menuService: MenuService) {
     
   }
-
 
   selectMenu(menu: Number) {
     switch(menu) {
@@ -39,5 +40,7 @@ export class SidebarComponent {
       default:
         break;
     }
+
+    this.menuService.menuSelecionado = menu;
   }
 }
