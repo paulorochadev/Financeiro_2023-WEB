@@ -7,8 +7,8 @@ import { environment } from "../../environment";
 })
 
 export class LoginService {
-    constructor(private httpClient: HttpClient ) {
-
+    constructor(private httpClient: HttpClient) {
+        
     }
 
     private readonly baseUrl = environment["endPoint"];
