@@ -22,11 +22,11 @@
 
             <div class="row">
                 <div class="group-row">
-                    <label>Nome</label>
+                    <label>Sistemas</label>
 
-                    <!-- <ng-select class="select-padrao" bindLabel="name">
-
-                    </ng-select> -->
+                    <ng-select class="select-padrao" [(ngModel)]="sistemaSelect" [items]="listSistemas" bindLabel="name" [multiple]="false" [clearable]="false" [searchable]="false">
+                        
+                    </ng-select>
                     
                 </div>
             </div>
